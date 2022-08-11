@@ -1,0 +1,38 @@
+Algoritmo "controleBovino"
+
+Var
+
+   i, j, n, m, gado: inteiro
+   pastopar, pastoimpar: Vetor[1..42] de inteiro
+
+Inicio
+   i <- 1
+   j <- 1
+   m <- 1
+   n <- 1
+
+   escreval ("Informe o ", i ," o numero: ")
+   leia(gado)
+   enquanto (gado <> 0) faça
+      se (gado MOD 2 <> 0) entao
+         pastoimpar[i] <- gado
+         i <- i + 1
+      senao
+         pastopar[j] <- gado
+         j <- j + 1
+      fimse
+      escreval ("Informe o proximo gado ou 0 para sair: ")
+      leia(gado)
+   fimenquanto
+   escreval("gados para pasto par")
+   Para m de 1 ate i - 1  faca
+      escreval(pastopar[m])
+      m <- m + 1
+   Fimpara
+   escreval("gados para pasto impar")
+   Para n de 1 ate j - 1  faca
+      escreval(pastoimpar[n])
+      n <- n + 1
+   Fimpara
+
+Fimalgoritmo
